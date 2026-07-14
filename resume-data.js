@@ -190,13 +190,13 @@ const resumeData = {
 
   // ---------- SKILLS (grouped by category) ----------
   skillGroups: [
-    { category: "Programming", items: ["Python (NumPy, SciPy)", "C++", "MATLAB"] },
+    { category: "Programming", items: ["Python (NumPy, SciPy)", "C++", "MATLAB","HTML", "CSS", "JavaScript"] },
     { category: "Robotics", items: ["ROS 2", "Gazebo", "Inverse/Forward Kinematics", "Path Planning", "Collision Detection", "6-DOF Arm Control"] },
     { category: "CAD / Design", items: ["SolidWorks", "AutoCAD", "Multisim", "Proteus", "Xilinx"] },
     { category: "Embedded", items: ["Arduino", "Real-time Systems", "Sensor Integration", "Motor Control"] },
     { category: "AI / ML", items: ["Neural Networks", "Computer Vision (OpenCV)", "Prompt Engineering"] },
     { category: "Software & Tools", items: ["Git/GitHub", "Linux/Ubuntu", "LaTeX"] },
-    { category: "Web / Digital", items: ["HTML5", "CSS3", "JavaScript (ES6+)", "DOM Manipulation", "Responsive Design", "Form Validation", "REST API Integration", "WordPress", "AI-Assisted Website Building", "Digital Design", "Video Editing"] },
+    { category: "Web / Digital", items: ["HTML5", "CSS3", "JavaScript (ES6+)","React.js","Node.js", "DOM Manipulation", "Responsive Design", "Form Validation", "REST API Integration", "WordPress", "AI-Assisted Website Building", "Digital Design", "Video Editing"] },
     { category: "Business & Sales", items: ["Lead Generation", "Client Relations", "International Sales", "Real Estate", "Strategic Communication"] },
     { category: "Marketing", items: ["Social Media Marketing", "Freelancing (Fiverr)", "Content Creation"] },
     { category: "Core Competencies", items: ["Communication", "Problem Solving", "Critical Thinking", "Adaptability", "Teamwork", "Leadership", "Attention to Detail", "Analytical Thinking"] },
