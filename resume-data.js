@@ -1,7 +1,5 @@
 /* =====================================================================
-   RESUME DATA — SIRF YE FILE EDIT KAREIN
-   Jab resume update ho, bas neeche wale values change karein.
-   index.html, script.js, style.css ko haath nahi lagana.
+   RESUME DATA
    ===================================================================== */
 
 const resumeData = {
@@ -30,6 +28,20 @@ const resumeData = {
 
   // ---------- EXPERIENCE & EDUCATION ----------
   timeline: [
+    {
+      type: "Experience",
+      title: "Machine Learning Fundamentals Intern",
+      place: "NeuroFive Solutions",
+      duration: "16 Jul 2026 — 26 Aug 2026 · Remote",
+      desc: "Selected internship covering core machine learning fundamentals, real-time projects, and mentorship from industry experts."
+    },
+    {
+      type: "Experience",
+      title: "Full Stack Web Development Intern",
+      place: "NeuroFive Solutions",
+      duration: "16 Jul 2026 — 26 Aug 2026 · Remote",
+      desc: "Selected internship focused on full stack web development, real-time projects, and mentorship from industry experts."
+    },
     {
       type: "Experience",
       title: "Artificial Intelligence (AI) Intern",
@@ -149,6 +161,30 @@ const resumeData = {
       tags: ["HTML", "CSS", "JavaScript"],
       demo: "https://maharukhh.github.io",
       code: "https://github.com/maharukhh/maharukhh.github.io"
+    },
+    {
+      name: "Weather App",
+      category: "Web Development",
+      desc: "Live weather lookup app built with vanilla JavaScript, fetching real-time conditions from a weather API and rendering them into a clean, responsive UI.",
+      tags: ["HTML", "CSS", "JavaScript", "API Integration"],
+      demo: null,
+      code: "https://github.com/maharukhh/web-dev-basics/tree/main/Weather%20App"
+    },
+    {
+      name: "Random Quote Generator",
+      category: "Web Development",
+      desc: "Interactive quote generator that pulls from an array/object dataset and updates the DOM instantly on each click, with clipboard/share-friendly output.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+      demo: null,
+      code: "https://github.com/maharukhh/web-dev-basics/tree/main/Random%20Quote%20Generator"
+    },
+    {
+      name: "Countdown Timer",
+      category: "Web Development",
+      desc: "Real-time countdown built with the Date/Time API and interval functions, handling live date calculations and dynamic UI updates.",
+      tags: ["HTML", "CSS", "JavaScript", "Date/Time API"],
+      demo: null,
+      code: "https://github.com/maharukhh/web-dev-basics/tree/main/Countdown%20timer"
     }
   ],
 
@@ -160,7 +196,7 @@ const resumeData = {
     { category: "Embedded", items: ["Arduino", "Real-time Systems", "Sensor Integration", "Motor Control"] },
     { category: "AI / ML", items: ["Neural Networks", "Computer Vision (OpenCV)", "Prompt Engineering"] },
     { category: "Software & Tools", items: ["Git/GitHub", "Linux/Ubuntu", "LaTeX"] },
-    { category: "Web / Digital", items: ["WordPress", "AI-Assisted Website Building", "Digital Design", "Video Editing"] },
+    { category: "Web / Digital", items: ["HTML5", "CSS3", "JavaScript (ES6+)", "DOM Manipulation", "Responsive Design", "Form Validation", "REST API Integration", "WordPress", "AI-Assisted Website Building", "Digital Design", "Video Editing"] },
     { category: "Business & Sales", items: ["Lead Generation", "Client Relations", "International Sales", "Real Estate", "Strategic Communication"] },
     { category: "Marketing", items: ["Social Media Marketing", "Freelancing (Fiverr)", "Content Creation"] },
     { category: "Core Competencies", items: ["Communication", "Problem Solving", "Critical Thinking", "Adaptability", "Teamwork", "Leadership", "Attention to Detail", "Analytical Thinking"] },
