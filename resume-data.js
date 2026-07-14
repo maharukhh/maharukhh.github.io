@@ -94,9 +94,7 @@ const resumeData = {
   ],
 
   // ---------- PROJECTS ----------
-  // GitHub link har card pe apne profile se generic diya hai — jab har
-  // project ko alag repo mein upload kar dein, to us card ka "code" link
-  // us specific repo ke URL se replace kar dein.
+ 
   projects: [
     {
       name: "Robotic Arm Kinematics & Path Planning",
