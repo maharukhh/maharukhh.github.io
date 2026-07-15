@@ -206,6 +206,7 @@ const resumeData = {
     { name: "Technology Job Simulation", issuer: "Deloitte (via Forage)", date: "Jul 2026" },
     { name: "Python Developer", issuer: "SoloLearn", date: "Jul 2026" },
     { name: "Prompt Engineering", issuer: "SoloLearn", date: "Jul 2026" },
+    { name: "Machine Learning for Beginners", issuer: "SoloLearn", date: "Jul 2026" },
     { name: "Fiverr & Freelancing Skills", issuer: "Learning With Earning", date: "Feb 2026" },
     { name: "Social Media Sales Marketing Specialist", issuer: "Learning With Earning", date: "Feb 2026" },
     { name: "WordPress & AI Website Building", issuer: "Learning With Earning", date: "Feb 2026" }
