@@ -9,8 +9,10 @@
   --line-soft: #182a3c;
   --text: #eaf1f7;
   --text-dim: #7f93a8;
-  --accent: #5eead4;      /* cyan — blueprint highlight */
-  --accent-2: #f5a623;    /* amber — warning/callout */
+  --accent: #5eead4;      /* cyan — blueprint highlight / AI & ML domain */
+  --accent-2: #f5a623;    /* amber — warning/callout / Robotics domain */
+  --accent-web: #8b7ef5;  /* violet — Web Development domain */
+  --accent-personal: #9fb3c8; /* slate — Personal projects domain */
   --accent-soft: rgba(94, 234, 212, 0.12);
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -193,6 +195,55 @@ a { color: inherit; text-decoration: none; }
   50% { transform: translate(-16px, 18px) scale(1.08); }
 }
 
+/* ---------- HERO SIGNATURE: kinematic arm ---------- */
+.kinematic-sig {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.k-arc { stroke: var(--line); stroke-width: 1.5; }
+.k-bone { stroke: var(--accent-2); stroke-width: 2; stroke-linecap: round; }
+.k-joint { fill: var(--bg); stroke: var(--accent); stroke-width: 2; }
+.k-reach {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+  animation: reach-pulse 3.4s ease-in-out infinite;
+}
+
+.k-link2 {
+  animation: arm-sweep 6.5s ease-in-out infinite;
+}
+
+@keyframes arm-sweep {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-16deg); }
+}
+
+@keyframes reach-pulse {
+  0%, 100% { r: 15; opacity: 0.7; }
+  50% { r: 19; opacity: 0.25; }
+}
+
+@media (max-width: 720px) {
+  .kinematic-sig { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .k-link2 { animation: none; }
+  .k-reach { animation: none; }
+}
+
 .slideshow {
   position: relative;
   z-index: 1;
@@ -267,11 +318,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- SECTIONS ---------- */
+body { counter-reset: section-index; }
+
 .section {
   padding: 80px 6vw;
   max-width: 1100px;
   margin: 0 auto;
   border-top: 1px solid var(--line);
+  counter-increment: section-index;
 }
 
 .section h2 {
@@ -280,6 +334,21 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   margin-bottom: 36px;
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.section h2::before {
+  content: "0" counter(section-index);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 3px 8px;
+  letter-spacing: 0.04em;
 }
 
 .about-text {
@@ -397,9 +466,15 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 12px;
   margin-bottom: 18px;
-  padding-bottom: 10px;
+  padding: 4px 0 10px 14px;
   border-bottom: 1px solid var(--line);
+  border-left: 2px solid var(--line);
 }
+
+.project-section-title.domain-ai { border-left-color: var(--accent); }
+.project-section-title.domain-robotics { border-left-color: var(--accent-2); }
+.project-section-title.domain-web { border-left-color: var(--accent-web); }
+.project-section-title.domain-personal { border-left-color: var(--accent-personal); }
 
 .project-section-count {
   font-family: var(--font-mono);
@@ -464,7 +539,38 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+
+/* Corner-bracket signature: a small blueprint crosshair on every card,
+   quiet until hover, echoing the schematic-drawing motif used site-wide. */
+.project-card::before,
+.project-card::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid transparent;
+  opacity: 0;
+  transition: opacity 0.25s, border-color 0.25s;
+  pointer-events: none;
+}
+.project-card::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+.project-card::after { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+.project-card:hover::before,
+.project-card:hover::after { opacity: 1; border-color: var(--accent); }
+
+.project-card.domain-robotics:hover::before,
+.project-card.domain-robotics:hover::after { border-color: var(--accent-2); }
+.project-card.domain-web:hover::before,
+.project-card.domain-web:hover::after { border-color: var(--accent-web); }
+.project-card.domain-personal:hover::before,
+.project-card.domain-personal:hover::after { border-color: var(--accent-personal); }
+
+.project-badge.domain-ai { color: var(--accent); border-color: rgba(94,234,212,0.35); }
+.project-badge.domain-robotics { color: var(--accent-2); border-color: rgba(245,166,35,0.35); }
+.project-badge.domain-web { color: var(--accent-web); border-color: rgba(139,126,245,0.35); }
+.project-badge.domain-personal { color: var(--accent-personal); border-color: rgba(159,179,200,0.35); }
 
 .project-card:hover {
   transform: translateY(-6px);
