@@ -1,3 +1,4 @@
+
 // ---------- Basic info ----------
 document.getElementById("hero-name").textContent = resumeData.name;
 document.getElementById("hero-role").textContent = resumeData.role;
@@ -47,10 +48,11 @@ function renderFilterTabs() {
 }
 
 function projectCardHTML(p, { featured = false } = {}) {
+  const domain = categoryDomain(p.category);
   return `
-    <div class="project-card ${featured ? "featured-card" : ""} reveal visible">
+    <div class="project-card domain-${domain} ${featured ? "featured-card" : ""} reveal visible">
       ${featured ? `<span class="featured-ribbon">★ Featured</span>` : ""}
-      <span class="project-badge">${p.category}</span>
+      <span class="project-badge domain-${domain}">${p.category}</span>
       <h3>${p.name}</h3>
       <p>${p.desc}</p>
       ${featured && p.featuredNote ? `<p class="featured-note">${p.featuredNote}</p>` : ""}
@@ -63,6 +65,15 @@ function projectCardHTML(p, { featured = false } = {}) {
       </div>
     </div>
   `;
+}
+
+// Groups every project category into one of three visual domains so badges
+// and card accents read as color-coded families at a glance.
+function categoryDomain(category) {
+  if (/robotics/i.test(category)) return "robotics";
+  if (/web/i.test(category)) return "web";
+  if (/personal/i.test(category)) return "personal";
+  return "ai"; // AI Internship, AI Game Development, Detection & Classification, NLP & Language Tools, Machine Learning Track
 }
 
 function renderFeatured() {
@@ -86,9 +97,10 @@ function renderProjects() {
     const categories = [...new Set(resumeData.projects.map(p => p.category))];
     grid.innerHTML = categories.map(cat => {
       const items = resumeData.projects.filter(p => p.category === cat);
+      const domain = categoryDomain(cat);
       return `
         <div class="project-section reveal visible">
-          <h3 class="project-section-title">${cat}<span class="project-section-count">${items.length}</span></h3>
+          <h3 class="project-section-title domain-${domain}">${cat}<span class="project-section-count">${items.length}</span></h3>
           <div class="project-section-grid">
             ${items.map(p => projectCardHTML(p)).join("")}
           </div>
