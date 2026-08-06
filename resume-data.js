@@ -11,6 +11,7 @@ const resumeData = {
   about: "Motivated undergraduate in Robotics & Intelligent Systems at Bahria University with hands-on expertise in kinematics, path planning, and automation. Currently interning with DecodeLabs on advanced robotics projects. Proficient in ROS 2, Gazebo, Python, C++, and MATLAB, with additional cross-functional experience in sales, client relations, and digital/technical skills.",
 
   // ---------- HERO SLIDESHOW ----------
+ 
   heroSlides: [
     { icon: "arm", title: "Robotics Engineering", desc: "6-DOF arm kinematics, path planning & motion control" },
     { icon: "brain", title: "Artificial Intelligence", desc: "Computer vision, NLP, and machine learning models" },
@@ -93,112 +94,104 @@ const resumeData = {
   ],
 
   // ---------- PROJECTS ----------
-  
-  projectSections: [
+  // GitHub link har card pe apne profile se generic diya hai — jab har
+  // project ko alag repo mein upload kar dein, to us card ka "code" link
+  // us specific repo ke URL se replace kar dein.
+  projects: [
     {
-      section: "Robotics & Automation",
-      projects: [
-        {
-          name: "Robotic Arm Kinematics & Path Planning",
-          desc: "6-DOF robotic arm simulation: forward/inverse kinematics via damped least squares, plus collision-aware trajectory generation using quintic time-scaling.",
-          tags: ["Python", "NumPy", "Kinematics", "Matplotlib"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: true
-        },
-        {
-          name: "Autonomous Mobile Robot Navigation",
-          desc: "Simulated LiDAR builds a 2D occupancy grid in real time; A* pathfinding plans routes and dynamically re-plans when unexpected obstacles appear.",
-          tags: ["Python", "A* Search", "SLAM", "LiDAR Simulation"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: true
-        },
-        {
-          name: "PLC-Based Conveyor Sorting System",
-          desc: "Industrial control logic for a sorting conveyor: full I/O mapping, a finite state machine, debounce/edge-detection, and hardwired E-Stop safety interlocks.",
-          tags: ["Python", "PLC Logic", "FSM", "Automation"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: false
-        }
-      ]
+      name: "Robotic Arm Kinematics & Path Planning",
+      category: "Robotics Internship",
+      desc: "6-DOF robotic arm simulation: forward/inverse kinematics via damped least squares, plus collision-aware trajectory generation using quintic time-scaling.",
+      tags: ["Python", "NumPy", "Kinematics", "Matplotlib"],
+      demo: null,
+      code: "https://github.com/maharukhh",
+      featured: true,
+      featuredNote: "Full IK solver + smooth trajectory generation for a 6-DOF arm — the core robotics stack in one project."
     },
     {
-      section: "Artificial Intelligence & Machine Learning",
-      projects: [
-        {
-          name: "Building the Machine's Optic Nerve",
-          desc: "Computer vision pipeline with two paths: OCR text extraction (OpenCV + Tesseract) and object detection with a MobileNet-SSD deep learning model, both gated at ≥80% confidence.",
-          tags: ["Python", "OpenCV", "OCR", "Object Detection"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: true
-        },
-        {
-          name: "Tech Stack Recommender",
-          desc: "Content-based recommendation engine that matches a user's skills to the best-fit job roles using TF-IDF vectorization and cosine similarity.",
-          tags: ["Python", "scikit-learn", "TF-IDF"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: false
-        },
-        {
-          name: "Iris Flower Classification",
-          desc: "K-Nearest Neighbors classifier on the Iris dataset following the Input→Process→Output framework, with confusion matrix and accuracy evaluation.",
-          tags: ["Python", "scikit-learn", "KNN"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: false
-        },
-        {
-          name: "Rule-Based AI Chatbot",
-          desc: "Dictionary-driven chatbot with O(1) intent lookup (no if-elif ladder), two-stage intent mapping, and a continuous conversation loop.",
-          tags: ["Python", "NLP Basics", "Dictionaries"],
-          demo: null,
-          code: "https://github.com/maharukhh",
-          featured: false
-        }
-      ]
+      name: "Autonomous Mobile Robot Navigation",
+      category: "Robotics Internship",
+      desc: "Simulated LiDAR builds a 2D occupancy grid in real time; A* pathfinding plans routes and dynamically re-plans when unexpected obstacles appear.",
+      tags: ["Python", "A* Search", "SLAM", "LiDAR Simulation"],
+      demo: null,
+      code: "https://github.com/maharukhh",
+      featured: true,
+      featuredNote: "Real-time mapping and re-planning — the closest thing here to a real autonomous-robot pipeline."
     },
     {
-      section: "Web Development",
-      projects: [
-        {
-          name: "This Portfolio Website",
-          desc: "A fully data-driven personal site — one file holds all resume data and the entire page renders and updates from it automatically.",
-          tags: ["HTML", "CSS", "JavaScript"],
-          demo: "https://maharukhh.github.io",
-          code: "https://github.com/maharukhh/maharukhh.github.io",
-          featured: false
-        },
-        {
-          name: "Weather App",
-          desc: "Live weather lookup app built with vanilla JavaScript, fetching real-time conditions from a weather API and rendering them into a clean, responsive UI.",
-          tags: ["HTML", "CSS", "JavaScript", "API Integration"],
-          demo: null,
-          code: "https://github.com/maharukhh/web-dev-basics/tree/main/Weather%20App",
-          featured: false
-        },
-        {
-          name: "Random Quote Generator",
-          desc: "Interactive quote generator that pulls from an array/object dataset and updates the DOM instantly on each click, with clipboard/share-friendly output.",
-          tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
-          demo: null,
-          code: "https://github.com/maharukhh/web-dev-basics/tree/main/Random%20Quote%20Generator",
-          featured: false
-        },
-        {
-          name: "Countdown Timer",
-          desc: "Real-time countdown built with the Date/Time API and interval functions, handling live date calculations and dynamic UI updates.",
-          tags: ["HTML", "CSS", "JavaScript", "Date/Time API"],
-          demo: null,
-          code: "https://github.com/maharukhh/web-dev-basics/tree/main/Countdown%20timer",
-          featured: false
-        }
-      ]
+      name: "PLC-Based Conveyor Sorting System",
+      category: "Robotics Internship",
+      desc: "Industrial control logic for a sorting conveyor: full I/O mapping, a finite state machine, debounce/edge-detection, and hardwired E-Stop safety interlocks.",
+      tags: ["Python", "PLC Logic", "FSM", "Automation"],
+      demo: null,
+      code: "https://github.com/maharukhh"
+    },
+    {
+      name: "Rule-Based AI Chatbot",
+      category: "AI Internship",
+      desc: "Dictionary-driven chatbot with O(1) intent lookup (no if-elif ladder), two-stage intent mapping, and a continuous conversation loop.",
+      tags: ["Python", "NLP Basics", "Dictionaries"],
+      demo: null,
+      code: "https://github.com/maharukhh"
+    },
+    {
+      name: "Iris Flower Classification",
+      category: "AI Internship",
+      desc: "K-Nearest Neighbors classifier on the Iris dataset following the Input→Process→Output framework, with confusion matrix and accuracy evaluation.",
+      tags: ["Python", "scikit-learn", "KNN"],
+      demo: null,
+      code: "https://github.com/maharukhh"
+    },
+    {
+      name: "Tech Stack Recommender",
+      category: "AI Internship",
+      desc: "Content-based recommendation engine that matches a user's skills to the best-fit job roles using TF-IDF vectorization and cosine similarity.",
+      tags: ["Python", "scikit-learn", "TF-IDF"],
+      demo: null,
+      code: "https://github.com/maharukhh"
+    },
+    {
+      name: "Building the Machine's Optic Nerve",
+      category: "AI Internship",
+      desc: "Computer vision pipeline with two paths: OCR text extraction (OpenCV + Tesseract) and object detection with a MobileNet-SSD deep learning model, both gated at ≥80% confidence.",
+      tags: ["Python", "OpenCV", "OCR", "Object Detection"],
+      demo: null,
+      code: "https://github.com/maharukhh",
+      featured: true,
+      featuredNote: "Two-path CV pipeline (OCR + deep-learning detection) with a confidence gate — the strongest AI/ML build."
+    },
+    {
+      name: "This Portfolio Website",
+      category: "Personal Project",
+      desc: "A fully data-driven personal site — one file holds all resume data and the entire page renders and updates from it automatically.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      demo: "https://maharukhh.github.io",
+      code: "https://github.com/maharukhh/maharukhh.github.io"
+    },
+    {
+      name: "Weather App",
+      category: "Web Development",
+      desc: "Live weather lookup app built with vanilla JavaScript, fetching real-time conditions from a weather API and rendering them into a clean, responsive UI.",
+      tags: ["HTML", "CSS", "JavaScript", "API Integration"],
+      demo: null,
+      code: "https://github.com/maharukhh/web-dev-basics/tree/main/Weather%20App"
+    },
+    {
+      name: "Random Quote Generator",
+      category: "Web Development",
+      desc: "Interactive quote generator that pulls from an array/object dataset and updates the DOM instantly on each click, with clipboard/share-friendly output.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+      demo: null,
+      code: "https://github.com/maharukhh/web-dev-basics/tree/main/Random%20Quote%20Generator"
+    },
+    {
+      name: "Countdown Timer",
+      category: "Web Development",
+      desc: "Real-time countdown built with the Date/Time API and interval functions, handling live date calculations and dynamic UI updates.",
+      tags: ["HTML", "CSS", "JavaScript", "Date/Time API"],
+      demo: null,
+      code: "https://github.com/maharukhh/web-dev-basics/tree/main/Countdown%20timer"
     }
-    
   ],
 
   // ---------- SKILLS (grouped by category) ----------
@@ -218,10 +211,12 @@ const resumeData = {
 
   // ---------- CERTIFICATIONS ----------
   certifications: [
+    { name: "AI Fluency: Framework & Foundations", issuer: "Anthropic", date: "2026", verify: null },
+    { name: "AI Fundamentals: Foundations for Understanding AI", issuer: "IBM SkillsBuild", date: "Aug 2026", verify: "https://www.credly.com/go/hs4VyyNX" },
     { name: "Technology Job Simulation", issuer: "Deloitte (via Forage)", date: "Jul 2026" },
     { name: "Python Developer", issuer: "SoloLearn", date: "Jul 2026" },
-    { name: "Prompt Engineering", issuer: "SoloLearn", date: "Jul 2026" },
     { name: "Machine Learning for Beginners", issuer: "SoloLearn", date: "Jul 2026" },
+    { name: "Prompt Engineering", issuer: "SoloLearn", date: "Jul 2026" },
     { name: "Fiverr & Freelancing Skills", issuer: "Learning With Earning", date: "Feb 2026" },
     { name: "Social Media Sales Marketing Specialist", issuer: "Learning With Earning", date: "Feb 2026" },
     { name: "WordPress & AI Website Building", issuer: "Learning With Earning", date: "Feb 2026" }
