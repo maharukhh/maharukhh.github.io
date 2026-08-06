@@ -1,9 +1,3 @@
-/* =====================================================================
-   Ye file resumeData ko padh kar HTML banati hai, aur scroll animations
-   + mobile menu handle karti hai. Isay edit karne ki zaroorat nahi —
-   sirf resume-data.js edit karein.
-   ===================================================================== */
-
 // ---------- Basic info ----------
 document.getElementById("hero-name").textContent = resumeData.name;
 document.getElementById("hero-role").textContent = resumeData.role;
