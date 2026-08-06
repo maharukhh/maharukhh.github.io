@@ -46,19 +46,14 @@ function renderFilterTabs() {
   });
 }
 
-function renderProjects() {
-  const list = activeCategory === "All"
-    ? resumeData.projects
-    : resumeData.projects.filter(p => p.category === activeCategory);
-
-  document.getElementById("projects-subtitle").textContent =
-    `${resumeData.projects.length} projects across DecodeLabs' Robotics & AI internship tracks, plus personal work.`;
-
-  document.getElementById("project-grid").innerHTML = list.map(p => `
-    <div class="project-card reveal visible">
+function projectCardHTML(p, { featured = false } = {}) {
+  return `
+    <div class="project-card ${featured ? "featured-card" : ""} reveal visible">
+      ${featured ? `<span class="featured-ribbon">★ Featured</span>` : ""}
       <span class="project-badge">${p.category}</span>
       <h3>${p.name}</h3>
       <p>${p.desc}</p>
+      ${featured && p.featuredNote ? `<p class="featured-note">${p.featuredNote}</p>` : ""}
       <div class="tags">
         ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
       </div>
@@ -67,7 +62,43 @@ function renderProjects() {
         <a href="${p.code}" target="_blank" rel="noopener">Code →</a>
       </div>
     </div>
-  `).join("");
+  `;
+}
+
+function renderFeatured() {
+  const featuredEl = document.getElementById("featured-projects");
+  if (!featuredEl) return;
+  const picks = resumeData.projects.filter(p => p.featured);
+  featuredEl.innerHTML = picks.map(p => projectCardHTML(p, { featured: true })).join("");
+}
+
+function renderProjects() {
+  renderFeatured();
+
+  document.getElementById("projects-subtitle").textContent =
+    `${resumeData.projects.length} projects across DecodeLabs' Robotics & AI internship tracks, plus personal work.`;
+
+  const grid = document.getElementById("project-grid");
+
+  if (activeCategory === "All") {
+    // Group every project into its own category section so the work reads
+    // as distinct tracks (robotics, AI, web) rather than one long grid.
+    const categories = [...new Set(resumeData.projects.map(p => p.category))];
+    grid.innerHTML = categories.map(cat => {
+      const items = resumeData.projects.filter(p => p.category === cat);
+      return `
+        <div class="project-section reveal visible">
+          <h3 class="project-section-title">${cat}<span class="project-section-count">${items.length}</span></h3>
+          <div class="project-section-grid">
+            ${items.map(p => projectCardHTML(p)).join("")}
+          </div>
+        </div>
+      `;
+    }).join("");
+  } else {
+    const items = resumeData.projects.filter(p => p.category === activeCategory);
+    grid.innerHTML = `<div class="project-section-grid">${items.map(p => projectCardHTML(p)).join("")}</div>`;
+  }
 }
 
 // ---------- Skills (grouped) ----------
@@ -89,7 +120,7 @@ function renderCertsLangs() {
     ${resumeData.certifications.map(c => `
       <div class="cert-item">
         <p class="cert-name">${c.name}</p>
-        <p class="cert-meta">${c.issuer} · ${c.date}</p>
+        <p class="cert-meta">${c.issuer} · ${c.date}${c.verify ? ` · <a href="${c.verify}" target="_blank" rel="noopener" class="cert-verify">Verify →</a>` : ""}</p>
       </div>
     `).join("")}
   `;
