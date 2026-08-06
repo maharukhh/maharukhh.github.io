@@ -11,7 +11,7 @@ const resumeData = {
   about: "Motivated undergraduate in Robotics & Intelligent Systems at Bahria University with hands-on expertise in kinematics, path planning, and automation. Currently interning with DecodeLabs on advanced robotics projects. Proficient in ROS 2, Gazebo, Python, C++, and MATLAB, with additional cross-functional experience in sales, client relations, and digital/technical skills.",
 
   // ---------- HERO SLIDESHOW ----------
- 
+
   heroSlides: [
     { icon: "arm", title: "Robotics Engineering", desc: "6-DOF arm kinematics, path planning & motion control" },
     { icon: "brain", title: "Artificial Intelligence", desc: "Computer vision, NLP, and machine learning models" },
@@ -161,12 +161,116 @@ const resumeData = {
       featuredNote: "Two-path CV pipeline (OCR + deep-learning detection) with a confidence gate — the strongest AI/ML build."
     },
     {
+      name: "Reinforcement Learning Game Agent",
+      category: "AI Game Development",
+      desc: "Tabular Q-learning agent that learns to navigate a grid world from start to goal purely through trial-and-error reward signals — epsilon-greedy exploration, no hardcoded path.",
+      tags: ["Python", "Q-Learning", "Reinforcement Learning"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-game-projects/tree/main/Reinforcement%20Learning%20Game%20Agent"
+    },
+    {
+      name: "3D Game Simulation (from scratch)",
+      category: "AI Game Development",
+      desc: "A minimal 3D engine built with no 3D library — manual perspective projection, rotation matrices, and a flyable first-person camera rendering wireframe cubes.",
+      tags: ["Python", "3D Math", "Projection", "Camera Control"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-game-projects/tree/main/3D%20Game%20Simulation"
+    },
+    {
+      name: "Snake Game with AI",
+      category: "AI Game Development",
+      desc: "Classic Snake with a BFS autopilot that routes to the food while avoiding its own body, falling back to a flood-fill safety check when no path exists.",
+      tags: ["Python", "BFS", "Pathfinding", "Pygame"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-game-projects/tree/main/Snake%20Game%20with%20AI"
+    },
+    {
+      name: "Tower Defense Game AI",
+      category: "AI Game Development",
+      desc: "Enemies pathfind through a maze with BFS and reroute live when towers block their path, while towers auto-target the nearest enemy in range.",
+      tags: ["Python", "BFS", "Real-time AI"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-game-projects/tree/main/Tower%20Defense%20Game%20AI"
+    },
+    {
+      name: "Object Detection System",
+      category: "Detection & Classification",
+      desc: "Identifies and classifies objects in images using computer vision and a trained detection model.",
+      tags: ["Python", "OpenCV", "Computer Vision"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-detection-systems/tree/main/Object%20Detection%20System"
+    },
+    {
+      name: "Fake News Detector",
+      category: "Detection & Classification",
+      desc: "Classifies news articles as genuine or fake using text analysis and a supervised ML classifier.",
+      tags: ["Python", "scikit-learn", "Text Classification"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-detection-systems/tree/main/Fake%20News%20Detector"
+    },
+    {
+      name: "Spam Email Detector",
+      category: "Detection & Classification",
+      desc: "Flags spam emails from message content using a trained machine learning classification pipeline.",
+      tags: ["Python", "scikit-learn", "Text Classification"],
+      demo: null,
+      code: "https://github.com/maharukhh/AI-detection-systems/tree/main/Spam%20Email%20Detector"
+    },
+    {
+      name: "NLP Text Summarizer",
+      category: "NLP & Language Tools",
+      desc: "Automatically condenses lengthy text into concise summaries using Natural Language Processing techniques.",
+      tags: ["Python", "NLTK", "Text Processing"],
+      demo: null,
+      code: "https://github.com/maharukhh/nlp-ai-tools/tree/main/NLP%20Text%20Summarizer"
+    },
+    {
+      name: "AI Autocorrect Tool",
+      category: "NLP & Language Tools",
+      desc: "Detects and corrects spelling mistakes in text in real time using NLP-based logic.",
+      tags: ["Python", "NLTK", "Regex"],
+      demo: null,
+      code: "https://github.com/maharukhh/nlp-ai-tools/tree/main/AI%20Autocorrect%20Tool"
+    },
+    {
+      name: "Employee Salary Prediction",
+      category: "Machine Learning Track",
+      desc: "Predicts employee salaries from historical and demographic data using a regression model.",
+      tags: ["Python", "scikit-learn", "Regression"],
+      demo: null,
+      code: "https://github.com/maharukhh/ml-projects/tree/main/Employee%20Salary%20Prediction"
+    },
+    {
+      name: "Student Result Prediction",
+      category: "Machine Learning Track",
+      desc: "Predicts student academic performance from educational data using a trained ML model.",
+      tags: ["Python", "scikit-learn", "Classification"],
+      demo: null,
+      code: "https://github.com/maharukhh/ml-projects/tree/main/Student%20Result%20Prediction"
+    },
+    {
+      name: "Age Group Prediction System",
+      category: "Machine Learning Track",
+      desc: "A computer vision and deep learning model that predicts a person's age group from facial images.",
+      tags: ["Python", "Deep Learning", "Computer Vision"],
+      demo: null,
+      code: "https://github.com/maharukhh/ml-projects/tree/main/Age%20Group%20Prediction%20System"
+    },
+    {
       name: "This Portfolio Website",
       category: "Personal Project",
       desc: "A fully data-driven personal site — one file holds all resume data and the entire page renders and updates from it automatically.",
       tags: ["HTML", "CSS", "JavaScript"],
       demo: "https://maharukhh.github.io",
       code: "https://github.com/maharukhh/maharukhh.github.io"
+    },
+    {
+      name: "Coffee Shop Landing Page",
+      category: "Web Development",
+      desc: "Responsive coffee shop landing page built during the Neurofive Full Stack track — semantic layout, custom styling, and interactive JS touches.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      demo: null,
+      code: "https://github.com/maharukhh/neurofive-full-stack-web-development-track/tree/main/coffee%20shop%20landing(TASK%231)"
     },
     {
       name: "Weather App",
