@@ -53,7 +53,7 @@ const resumeData = {
       type: "Experience",
       title: "Online Internship — Robotics & Automation",
       place: "DecodeLabs",
-      duration: "Jun 2026 — Jul 2026 (Ongoing)",
+      duration: "Jun 2026 — Jul 2026 . Remote",
       desc: "6-DOF robotic arm kinematics & inverse kinematics, path planning & trajectory generation, ROS 2 and Gazebo simulation with collision detection, motion control & hardware interfaces."
     },
     {
@@ -315,7 +315,8 @@ const resumeData = {
 
   // ---------- CERTIFICATIONS ----------
   certifications: [
-    { name: "AI Fluency: Framework & Foundations", issuer: "Anthropic", date: "2026", verify: null },
+    { name: "Python (Beyond the Basics)", issuer: "10Pearls Universaty", date: "2026" },
+    { name: "AI Fluency: Framework & Foundations", issuer: "Anthropic", date: "2026" },
     { name: "AI Fundamentals: Foundations for Understanding AI", issuer: "IBM SkillsBuild", date: "Aug 2026", verify: "https://www.credly.com/go/hs4VyyNX" },
     { name: "Technology Job Simulation", issuer: "Deloitte (via Forage)", date: "Jul 2026" },
     { name: "Python Developer", issuer: "SoloLearn", date: "Jul 2026" },
