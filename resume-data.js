@@ -315,8 +315,9 @@ const resumeData = {
 
   // ---------- CERTIFICATIONS ----------
   certifications: [
-    { name: "Python (Beyond the Basics)", issuer: "10Pearls Universaty", date: "2026" },
-    { name: "AI Fluency: Framework & Foundations", issuer: "Anthropic", date: "2026" },
+    { name: "Python Course)", issuer: "Kaggle", date: "Aug 2026" },
+    { name: "Python (Beyond the Basics)", issuer: "10Pearls Universaty", date: "Aug 2026" },
+    { name: "AI Fluency: Framework & Foundations", issuer: "Anthropic", date: "Aug 2026" },
     { name: "AI Fundamentals: Foundations for Understanding AI", issuer: "IBM SkillsBuild", date: "Aug 2026", verify: "https://www.credly.com/go/hs4VyyNX" },
     { name: "Technology Job Simulation", issuer: "Deloitte (via Forage)", date: "Jul 2026" },
     { name: "Python Developer", issuer: "SoloLearn", date: "Jul 2026" },
